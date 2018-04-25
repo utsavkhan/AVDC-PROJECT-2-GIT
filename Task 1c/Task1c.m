@@ -19,10 +19,7 @@ for T = 0.01:0.01:1
     
     sim('TasksSimulink')
         
-    [e_beta_mean,e_beta_max,time_at_max,error] = errorCalc(beta_washout.Data,Beta_VBOX);
-    disp(' ');
-    fprintf('The MSE of Beta estimation is: %d \n',e_beta_mean);
-    fprintf('The Max error of Beta estimation is: %d \n',e_beta_max);
+    error_beta_wash(coeff) = immse(Beta_VBOX,beta_washout.Data);
         
     plot(beta_washout.Time,beta_washout.Data,'-.');
     hold on
