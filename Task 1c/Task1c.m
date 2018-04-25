@@ -3,9 +3,8 @@
 clear Cf
 clear Cr
 
-Cf = 81000
-Cr = 90000
-
+Cf = 81000;
+Cr = 90000;
 
 % clear beta_integration
 % clear beta_washout
